@@ -30,3 +30,4 @@ test-results/
 
 # Tauri build
 src-tauri/target/
+.firebase
