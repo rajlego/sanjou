@@ -3,24 +3,15 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     // Sanjou app data - users can only access their own data
-    // For now, allow authenticated users to read/write their own documents
-    // In production, add proper user authentication rules
 
-    match /sync/{docId} {
-      // Allow read/write for Yjs sync documents
-      // Each user's data is stored under their unique document ID
-      allow read, write: if true;
+    match /sync/{userId} {
+      // Users can only read/write their own sync document
+      // Document ID must match their Firebase Auth UID
+      allow read, write: if request.auth != null && request.auth.uid == userId;
     }
 
-    match /blocks/{blockId} {
-      allow read, write: if true;
-    }
-
-    match /tasks/{taskId} {
-      allow read, write: if true;
-    }
-
-    match /rightNowLists/{listId} {
+    // Legacy anonymous sync (optional - remove if not needed)
+    match /sync/sanjou-sync-anonymous {
       allow read, write: if true;
     }
   }
