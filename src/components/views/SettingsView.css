@@ -1,0 +1,219 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.settings-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.setting-label {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.setting-input-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.setting-input {
+  width: 60px;
+  font-family: inherit;
+  font-size: 13px;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  text-align: center;
+  outline: none;
+}
+
+.setting-input:focus {
+  border-color: var(--accent-color);
+}
+
+.setting-unit {
+  font-size: 12px;
+  color: var(--text-muted);
+  min-width: 40px;
+}
+
+.setting-select {
+  font-family: inherit;
+  font-size: 13px;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+}
+
+.setting-select:focus {
+  border-color: var(--accent-color);
+}
+
+.setting-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-track {
+  width: 36px;
+  height: 20px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.setting-toggle-on .toggle-track {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.toggle-thumb {
+  width: 14px;
+  height: 14px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all var(--transition-normal);
+}
+
+.setting-toggle-on .toggle-thumb {
+  left: 18px;
+  background-color: var(--bg-primary);
+}
+
+.toggle-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  min-width: 24px;
+}
+
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.shortcut-row kbd {
+  font-family: inherit;
+  font-size: 11px;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  min-width: 50px;
+  text-align: center;
+}
+
+.shortcut-row span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Export Options */
+.export-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.export-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.export-buttons {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.export-status {
+  font-size: 11px;
+  color: var(--color-success);
+}
+
+/* Account Section */
+.account-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.account-user {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.account-email {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.account-status {
+  font-size: 10px;
+  color: var(--color-success);
+}
+
+.account-signin {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.account-description {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.settings-footer {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}

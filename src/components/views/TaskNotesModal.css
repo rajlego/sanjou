@@ -1,0 +1,57 @@
+.task-notes-modal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.task-notes-textarea {
+  width: 100%;
+  min-height: 200px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: var(--space-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  resize: vertical;
+  outline: none;
+}
+
+.task-notes-textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.task-notes-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.task-notes-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-notes-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-notes-hint kbd {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-family: inherit;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.task-notes-actions {
+  display: flex;
+  gap: var(--space-sm);
+}

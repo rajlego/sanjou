@@ -1,0 +1,112 @@
+.right-now-panel {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 200px;
+}
+
+.right-now-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.right-now-header .section-title {
+  margin-bottom: 0;
+}
+
+.right-now-prompt {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.right-now-items {
+  list-style: none;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: var(--space-md);
+}
+
+.right-now-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.right-now-item:last-child {
+  border-bottom: none;
+}
+
+.right-now-item .checkbox {
+  flex: 1;
+}
+
+.right-now-item .checkbox-label {
+  font-size: 12px;
+}
+
+.item-remove {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: all var(--transition-normal);
+}
+
+.right-now-item:hover .item-remove {
+  opacity: 1;
+}
+
+.item-remove:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--color-danger);
+}
+
+.right-now-input-row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: auto;
+}
+
+.right-now-input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 12px;
+  padding: var(--space-sm);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition-normal);
+}
+
+.right-now-input:focus {
+  border-color: var(--accent-color);
+}
+
+.right-now-input::placeholder {
+  color: var(--text-muted);
+}
+
+.right-now-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

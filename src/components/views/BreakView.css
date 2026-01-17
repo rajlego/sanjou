@@ -1,0 +1,228 @@
+.break-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+.break-header {
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.break-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-info);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.break-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  gap: var(--space-lg);
+}
+
+/* Timer Display */
+.break-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 2px solid var(--color-info);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 20px rgba(90, 180, 196, 0.2);
+  min-width: 200px;
+}
+
+.break-time {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.break-label {
+  font-size: 12px;
+  color: var(--color-info);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: var(--space-xs);
+}
+
+.break-progress {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: 2px;
+  margin-top: var(--space-md);
+  overflow: hidden;
+}
+
+.break-progress-fill {
+  height: 100%;
+  background: var(--color-info);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+/* Notes Section */
+.break-notes-section {
+  width: 100%;
+  max-width: 280px;
+}
+
+.break-notes-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-xs);
+}
+
+.break-notes-input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 12px;
+  padding: var(--space-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  outline: none;
+  resize: none;
+  line-height: 1.4;
+}
+
+.break-notes-input:focus {
+  border-color: var(--color-info);
+}
+
+.break-notes-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Controls */
+.break-controls {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.break-btn {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.break-btn.primary {
+  background: var(--accent-color);
+  color: var(--bg-primary);
+  border: none;
+}
+
+.break-btn.primary:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.break-btn.secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.break-btn.secondary:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Break Complete */
+.break-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-lg);
+  background: var(--bg-secondary);
+  border: 2px solid var(--color-info);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.break-complete-icon {
+  font-size: 36px;
+  margin-bottom: var(--space-sm);
+}
+
+.break-complete-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-info);
+  margin-bottom: var(--space-xs);
+}
+
+.break-complete-message {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Footer Hints */
+.break-hints {
+  padding: var(--space-sm);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.break-hints .hint {
+  font-size: 10px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.break-hints .hint kbd {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-family: inherit;
+  font-size: 9px;
+  color: var(--text-secondary);
+}
+
+/* Shortcut Badge */
+.shortcut-badge {
+  display: none;
+  padding: 1px 5px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+
+.alt-active .shortcut-badge {
+  display: inline-block;
+}
+
+.alt-active .break-btn.primary {
+  box-shadow: 0 0 12px var(--accent-glow);
+}
